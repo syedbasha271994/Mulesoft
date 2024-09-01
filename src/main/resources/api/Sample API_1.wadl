@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="Sample API">This is a sample API with five endpoints.</doc>
+  <resources base="https://api.example.com/v1">
+    <resource path="movies" id="/movies">
+      <doc xml:lang="en" title="/movies"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Returns a list of movie
+Get list of movie</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">booking movie ticket
+booking movie ticket</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="movies/{id}" id="/movies/{id}">
+      <doc xml:lang="en" title="/movies/{id}"/>
+      <param name="id" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Returns a single movie
+Get an movies by ID</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>
